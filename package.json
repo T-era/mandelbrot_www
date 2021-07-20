@@ -1,0 +1,20 @@
+{
+  "name": "mandelbrot_www",
+  "version": "1.0.0",
+  "description": "mandelbrot with WebWorker & WASM",
+  "scripts": {
+    "build": "npm run clean:out && npm run build:wasm && npm run build:webpack && npm run build:cp",
+	"clean:out": "rm out/*",
+    "build:wasm": "wasm-pack build --target web",
+	"build:webpack": "webpack",
+	"build:cp": "cp static/* out/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.3.5",
+    "webpack": "^5.45.1",
+    "webpack-cli": "^4.7.2"
+  }
+}

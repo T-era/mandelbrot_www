@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang='jp'>
+	<head>
+		<meta charset="UTF-8">
+		<title>mandelbrot with wasm</title>
+		<script src='./worker_mgr.js'></script>
+	</head>
+	<body onload='javascript: onload()'>
+		<canvas width='640' height='400' id='c01' ></canvas>
+		<div>
+			<input type='text' readonly id='status_box' style='width: 100%;' />
+			<label for='loop_max'>ループMax</label><input type='number' value='100000' id='loop_max' />
+			<button onclick='javascript: canvasGoGo(-2, -1, 0.005)'>push</button>
+		</div>
+	</body>
+</html>
