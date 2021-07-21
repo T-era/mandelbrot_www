@@ -1,7 +1,7 @@
-const HOR = 1;
-const VER = 40;
-const WID = 640 / HOR;
-const HEI = 400 / VER;
+const WID = 640;
+const HEI = 10;
+const HOR = 640 / WID;
+const VER = 400 / HEI;
 function WorkerWrapper(cvs, lx, ly) {
 	var ctx = cvs.getContext('2d');
 	var myWorker = new Worker('./mandelbrot_www.js');
