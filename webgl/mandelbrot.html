@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>mandelbrot with WebGL</title>
+	<style>
+	canvas {
+		width: 640px;
+		height: 400px;
+	}
+	</style>
+	<script type="text/javascript" src="./shaders.js"></script>
+	<script type="text/javascript" src="./init.js"></script>
+</head>
+
+<body>
+	<canvas id="canvas" width="640" height="400"></canvas>
+	<div>
+		<input type='text' readonly id='status_box' style='width: 100%;' />
+		<label for='loop_max'>ループMax</label><input type='number' value='1000' id='loop_max' max='100000' />
+		<button id='startBtn'>push</button>
+	</div>
+	<script type="text/javascript" defer>
+	let canvas = document.getElementById('canvas');
+	let statusBar = document.getElementById('status_box');
+	let loopInput = document.getElementById('loop_max');
+	let startBtn = document.getElementById('startBtn');
+	let showStatus = (str) => {
+		statusBar.value = str;
+	}
+
+	mandelbrot.init(
+		canvas,
+		mandelbrot_shader.vertex,
+		mandelbrot_shader.fragment,
+		showStatus);
+	let pointerPos = {x:0,y:0};
+	mandelbrot.ready();
+
+	canvas.onmousemove = function(e) {
+		showStatus(mandelbrot.show(
+			(e.offsetX - canvas.width / 2) / canvas.width * 2,
+			-(e.offsetY - canvas.height / 2) / canvas.height * 2));
+	};
+	canvas.onclick = function(e) {
+		mandelbrot.moveCenter({
+			x: (e.offsetX - canvas.width / 2) / canvas.width * 2,
+			y: -(e.offsetY - canvas.height / 2) / canvas.height * 2,
+		});
+		mandelbrot.scaleUp();
+		mandelbrot.render(loopInput.value);
+	}
+	startBtn.onclick = function() {
+		mandelbrot.render(loopInput.value);
+	}
+	</script>
+</body>
+</html>
