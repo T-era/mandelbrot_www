@@ -19,7 +19,7 @@ pub fn image_data(min_x :f64, min_y :f64, d :f64, loop_max :usize) -> Int16Array
 			let lx = min_x + d * x as f64;
 			let pos = (y * WIDTH + x) * 4;
 			let c = Complex { re: lx, im: ly };
-			let color = color(calc(c, loop_max), loop_max);
+			let color = to_color(calc(c, loop_max), loop_max);
 
 			ret[(pos + 0) as usize] = color[0];
 			ret[(pos + 1) as usize] = color[1];
@@ -31,7 +31,7 @@ pub fn image_data(min_x :f64, min_y :f64, d :f64, loop_max :usize) -> Int16Array
 	return obj
 }
 
-fn color(result :usize, loop_max :usize) -> [i16;3] {
+fn to_color(result :usize, loop_max :usize) -> [i16;3] {
 	if result == 0 {
 		return [0, 0, 0];
 	} else if result < loop_max * 1 / 128 {

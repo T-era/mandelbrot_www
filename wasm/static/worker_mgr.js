@@ -75,7 +75,7 @@ function Scaler(manager) {
 		let g = imageData.data[1];
 		let b = imageData.data[2];
 
-		return `[${r},${g},${b}](${x},  ${y})`
+		return `[${r},${g},${b}]${scale}(${x},  ${y})`
 	}
 }
 function onload() {
