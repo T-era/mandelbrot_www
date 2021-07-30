@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>mandelbrot with WebGL</title>
+	<style>
+	canvas {
+		width: 640px;
+		height: 400px;
+	}
+	</style>
+	<script type="text/javascript" src="./mandelbrot.js" defer></script>
+</head>
+
+<body>
+	<canvas id="canvas" width="640" height="400"></canvas>
+	<div>
+		<input type='text' readonly id='status_box' style='width: 100%;' />
+		<label for='loop_max'>ループMax</label><input type='number' value='1000' id='loop_max' max='100000' />
+		<button id='start_btn'>push</button>
+	</div>
+</body>
+</html>

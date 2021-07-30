@@ -1,7 +1,19 @@
 # WebGLによるマンデルブロ集合描画
 マンデルブロ集合の描画 with WebGL
 
-そのまま動きます。
+# ビルド
+
+## ビルド環境の要件
+
+Node, npm が使えること
+
+## How to ビルド
+
+```
+npm run build
+```
+
+Webサーバで out/ を公開すればOK。
 
 # Notice
 

@@ -1,5 +1,5 @@
-const mandelbrot_shader = {
-	fragment: `
+export module MandelbrotShaders {
+	export const fragmentShader = `
 precision highp float;
 
 uniform int uLoopMax;
@@ -56,12 +56,13 @@ void main(void){
 	vec3 col = mandelbrot(c);
 	gl_FragColor = vec4(col, 1.0);
 }
-`,
-	vertex: `
+`;
+	export const vertexShader = `
 attribute vec4 position;
 
 void main ()
 {
-	gl_Position = vec4(position.x, position.y, position.zw);
+	gl_Position = position;
 }
-`};
+`;
+};

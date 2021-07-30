@@ -1,7 +1,8 @@
 /wasm/target
-/wasm/out/
 /wasm/pkg/
-/wasm/node_modules/
+
+out/
+node_modules/
 
 package-lock.json
 Cargo.lock
