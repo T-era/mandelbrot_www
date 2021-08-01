@@ -4,9 +4,13 @@
   "description": "mandelbrot with WebGL",
   "scripts": {
     "build": "npm run clean:out && npm run build:webpack && npm run build:cp",
-	"clean:out": "rm out/*",
+	"build2": "npm run clean:out2 && npm run build:webpack2 && npm run build:cp2",
+	"clean:out": "rm -f out/*",
+	"clean:out2": "rm -f out_anime/*",
 	"build:webpack": "webpack",
-	"build:cp": "cp static/* out/"
+	"build:webpack2": "webpack -c webpack_anime.config.js",
+	"build:cp": "cp static/* out/",
+	"build:cp2": "cp static_anime/* out_anime/"
   },
   "author": "",
   "license": "ISC",

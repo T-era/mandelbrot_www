@@ -1,0 +1,39 @@
+dl {
+	margin: 0;
+	border: solid 1px #444;
+	padding: 5px;
+}
+dt {
+	float: left;
+}
+dl dd {
+	text-align: right;
+	border-bottom: solid 1px #888;
+}
+canvas {
+	width: 640px;
+	height: 400px;
+}
+div.wrapper {
+	width: 650px;
+}
+table {
+	width: 100%;
+}
+table td input {
+	width: 100%;
+}
+details {
+	padding: 5px;
+	width: 50%;
+	float: right;
+	border: 1px solid #ddd;
+}
+details[open=open] {
+	color: pink;
+}
+details summary {
+	color: blue;
+	list-style: none;
+	text-decoration: underline;
+}

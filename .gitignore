@@ -3,6 +3,7 @@
 
 out/
 node_modules/
+out_anime/
 
 package-lock.json
 Cargo.lock

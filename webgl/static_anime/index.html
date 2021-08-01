@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>mandelbrot with WebGL</title>
+	<link rel='stylesheet' href='./index.css'>
+	<script type="text/javascript" src="./mandelbrot.js" defer></script>
+</head>
+
+<body>
+	<div class='wrapper'>
+		<canvas id="canvas" width="640" height="400"></canvas>
+		<div>
+			<dl>
+				<dt>中心座標</dt><dd id='dd_center'>&nbsp;</dd>
+				<dt>縮尺</dt><dd id='dd_scale'>&nbsp;</dd>
+				<dt>ループ最大数</dt><dd id='dd_loop_max'>&nbsp;</dd>
+			</dl>
+		</div>
+		<div>※ Canvasをクリックするとスタート
+			<details>
+				<summary>または</summary>
+				<table>
+					<tr><th>x</th><td><input type="number" id='auto_x' value='-0.7116233619781567'/></td></tr>
+					<tr><th>y</th><td><input type="number" id='auto_y' value='0.34503221649973165'/></td></tr>
+				</table>
+				この中心点にむけて
+				<button id='auto_start'>スタート</button>
+			</details>
+		</div>
+	</div>
+</body>
+</html>

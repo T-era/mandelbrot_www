@@ -103,8 +103,8 @@ export module ShaderSandbox {
 				}
 			}
 		}
-		moveCenter(pointerPos :Position) {
-			this.center = this.pToL(pointerPos);
+		moveCenter(center :Position) {
+			this.center = center;
 		}
 		zoom(ratio :number) {
 			this.scale *= ratio;

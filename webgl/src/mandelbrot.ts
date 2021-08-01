@@ -26,7 +26,7 @@ import { MandelbrotShaders } from './shaders';
 	};
 	canvas.onclick = function(e) {
 		renderer.moveCenter(
-			offsetToP(e)
+			renderer.pToL(offsetToP(e))
 		);
 		renderer.zoom(0.5);
 		renderer.render({
