@@ -2,7 +2,7 @@
 
 Web Assembly やら WebGL やらを使ってマンデルブロ集合を書いてみた。
 
-## TOC
+## お品書き
 
 - [WebAssembly & Web Worker で並列計算してみた](wasm/)
 - [WebGL に任せてみた](webgl/)
