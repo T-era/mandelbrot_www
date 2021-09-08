@@ -2,7 +2,8 @@
 
 Web Assembly やら WebGL やらを使ってマンデルブロ集合を書いてみた。
 
-## TOC
+## お品書き
+トップレベルのフォルダは、一つ一つが別々の実装方式書いた別アプリケーションです
 
-- [WebAssembly & Web Worker で並列計算してみた](wasm/)
-- [WebGL に任せてみた](webgl/)
+1. [WebAssembly & Web Worker で並列計算してみた](wasm/)
+2. [WebGL に任せてみた](webgl/)
